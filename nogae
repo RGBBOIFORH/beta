@@ -10,6 +10,10 @@ repeat wait()
         end
     end)
 until start
+
+repeat wait()
+
+until game:GetService("Players").LocalPlayer.PlayerScripts:FindFirstChild("LocalScript")
 PayPal = {}
 for i,v in next, getgc(true) do
     if typeof(v) == "table" and rawget(v, "FireServer") then
