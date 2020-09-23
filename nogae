@@ -25,9 +25,9 @@ end
 Remote:FireServer("df13b92f", "Police")
 wait(1)
 if game:GetService("Players").LocalPlayer.Team.Name ~= "Police" then
-    PayPal.Remote:FireServer("df13b92f", "Police")
-    PayPal.Remote:FireServer("df13b92f", "Police")
-    PayPal.Remote:FireServer("df13b92f", "Police")
+    Remote:FireServer("df13b92f", "Police")
+    Remote:FireServer("df13b92f", "Police")
+    Remote:FireServer("df13b92f", "Police")
 end
 
 
