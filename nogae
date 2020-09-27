@@ -19,15 +19,39 @@ for i,v in next, getgc(true) do
     if typeof(v) == "table" and rawget(v, "FireServer") then
         Remote = v
     end
+    
+end
+
+local AllHasshes = (function()
+	for i,v in pairs(getgc(true)) do
+		if type(v) == "table" then
+			for i2,v2 in pairs(v) do
+				if type(v2) == "string" and v2:sub(1,1) == "!" and v2:len() > 10 then
+				    return v
+				end
+			end
+		end
+	end
+end)()
+
+for i,v in pairs(AllHasshes) do
+if i == "e3079bbd" then
+    Remote:FireServer("e3079bbd", "Police")
+elseif i == "df13b92f" then 
+    Remote:FireServer("df13b92f", "Police")
+end
 end
 
 
-Remote:FireServer("df13b92f", "Police")
+--Remote:FireServer("df13b92f", "Police")
 wait(1)
 if game:GetService("Players").LocalPlayer.Team.Name ~= "Police" then
     Remote:FireServer("df13b92f", "Police")
+    Remote:FireServer("e3079bbd", "Police")
     Remote:FireServer("df13b92f", "Police")
+    Remote:FireServer("e3079bbd", "Police")
     Remote:FireServer("df13b92f", "Police")
+    Remote:FireServer("e3079bbd", "Police")
 end
 
 
